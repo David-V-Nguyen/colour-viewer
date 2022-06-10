@@ -10,12 +10,10 @@ const routes: Routes = [
     path: 'colourWheel', 
     component: ColourWheelComponent,
     children: [
-      {path: ':name', component: ColoursComponent},
+      {path: ':colours', component: ColoursComponent},
       
     ]
-    
   },
-  {path: 'colours', component: ColoursComponent},
 
 ];
 
