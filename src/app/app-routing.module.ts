@@ -15,6 +15,7 @@ const routes: Routes = [
     ]
     
   },
+  {path: 'colours', component: ColoursComponent},
 
 ];
 
@@ -23,8 +24,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-
-
 
 
 }
