@@ -5,14 +5,41 @@
     </header>
     <body>
         
-        <h1>Colour Wheel Canvas</h1>
-        <div class="">
+        <h1>Colour Wheel</h1>
+        <!-- <div class="">
             <svg width="250%" height="250%"> 
                 <circle cx="500" cy="500" r="50" stroke="black" stroke-width="2" fill="white"></circle>
             </svg>
+        </div> -->
+        
+        <form action="">
+            <div class="form-group">
+                <label>Pick or enter color</label>
+                <input class="form-control" [(colorPicker)]="color" cpWidth='230px' cpHeight="500px"
+                    [style.background]="color" />
+            </div>
+        
+            <div class="form-group">
+                <label>Contrast</label>
+                <input class="form-control" [(colorPicker)]="color" [cpColorMode]="'grayscale'" [style.background]="color" />
+        
+            </div>
+            <div class="form-group">
+                <label>Color Output format</label>
+                <input class="form-control" [value]="color" [style.background]="color" [cpOutputFormat]="'rgba'"
+                    [(colorPicker)]="color" />
+            </div>
+        </form>
+        
+        <div class="colorPaletteContainer">
+            <h3>Pick a Color:</h3>
+            <span [style.background]="arrayColors[selectedColor]" [cpToggle]="true" [cpDialogDisplay]="'inline'"
+                [cpCancelButton]="true" [(colorPicker)]="arrayColors[selectedColor]"></span>
+            <div [style.background]="arrayColors['color1']" (click)="selectedColor='color1'"></div>
+            <div [style.background]="arrayColors['color2']" (click)="selectedColor='color2'"></div>
+            <div [style.background]="arrayColors['color3']" (click)="selectedColor='color3'"></div>
         </div>
-        
-        
+
 
 
     </body>

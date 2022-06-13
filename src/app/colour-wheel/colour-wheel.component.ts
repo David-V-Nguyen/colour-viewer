@@ -7,21 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColourWheelComponent implements OnInit {
 
-  fillColor = 'rgb(255, 0, 0)';
+  color: string = '#2889e9';
+  arrayColors: any = {
+    color1: '#2883e9',
+    color2: '#e920e9',
+    color3: 'rgb(255,245,0)',
+    color4: 'rgb(236,64,64)',
+    color5: 'rgba(45,208,45,1)'
+  };
 
+  selectedColor: string = 'color1';
 
   constructor() { }
 
   ngOnInit(): void {
   }
   
-  changeColour() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    this.fillColor = 'rgb(${r}, ${g}, ${b}';
-    
-  }
 
 
 }

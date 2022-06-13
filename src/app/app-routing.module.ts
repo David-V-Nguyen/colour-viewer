@@ -7,20 +7,12 @@ import { ColoursComponent } from './colours/colours.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {
-    path: 'colourWheel', 
-    component: ColourWheelComponent,
-    children: [
-      {path: ':colours', component: ColoursComponent},
-      
-    ]
-  },
-
+  {path: 'colourWheel', component: ColourWheelComponent},
+  {path: 'colours', component: ColoursComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
