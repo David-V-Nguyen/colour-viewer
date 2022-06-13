@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ColourWheelComponent } from './colour-wheel/colour-wheel.component';
 import { ColoursComponent } from './colours/colours.component';
 
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {
@@ -19,9 +20,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-
+  
 
 }
